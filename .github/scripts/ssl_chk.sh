@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 SLACK_URL="$1"
 DOMAINS=("www.google.com" "www.github.com" "www.twitter.com")
 curl -X POST -H 'Content-type: application/json' --data '{"text":"TEST1"}' "$SLACK_URL"
