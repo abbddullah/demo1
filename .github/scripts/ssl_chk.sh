@@ -2,7 +2,7 @@
 
 SLACK_URL= "$1"
 DOMAINS=("www.google.com" "www.github.com" "www.twitter.com")
-
+echo "$1"
 for i in "$DOMAINS[@]"; do
   days_to_expire=$(echo | openssl s_client -servername "$i" -connect "$i":443 2> /dev/null | openssl x509 -noout -dates | awk -F= '/^notAfter/ {print $2}' )
   expiry_unix=$(date -d "$days_to_expire" '+%s')
