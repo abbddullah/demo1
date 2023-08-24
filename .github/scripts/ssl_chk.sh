@@ -11,7 +11,7 @@ for i in "$DOMAINS[@]"; do
   	if [[ $no_of_days_left -ge 0 && no_of_days_left -le 30 ]]; then 
   		msg="SSL Expiry Alert \n*Domain: $i \n*Domain:$i\n*Warning: The SSL certificate for $i will expire in $no_of_days_left."
     		payload="{\"text\":\"$msg\"}"
-		curl -X POST -H 'Content-type: application/json' --data "$payload" "$SLACK_URL"
+		curl -X POST -H 'Content-type: application/json' --data "$payload" "https://hooks.slack.com/services/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"
 
     	fi
  done
