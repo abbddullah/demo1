@@ -14,5 +14,5 @@ jobs:
 
       - name: Run SSL Script
         run: |
-         chmod +x /demo1/scripts/ssl_chk.sh
-          ./ /demo1/scripts/ssl_chk.sh ${{ secrets.TEST_SECRET }}
+         chmod +x .github/scripts/ssl_chk.sh
+          ./ .github/scripts/ssl_chk.sh ${{ secrets.TEST_SECRET }}
