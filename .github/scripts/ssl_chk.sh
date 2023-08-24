@@ -15,6 +15,3 @@ for i in "$DOMAINS[@]"; do
 
     	fi
  done
- 
- 
- 
