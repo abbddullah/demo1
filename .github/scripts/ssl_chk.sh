@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SLACK_URL="$1"
+SLACK_URL= "$1"
 DOMAINS=("www.google.com" "www.github.com" "www.twitter.com")
 
 for i in "$DOMAINS[@]"; do
