@@ -1,0 +1,17 @@
+name: SSL Expiry Check
+
+on:
+  workflow_dispatch:
+   
+jobs:
+  check_ssl_expiry:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name : checkout repo
+        uses: actions/checkout@v2
+
+      - name: Run SSL Script
+        run: |
+         chmod +x .github/scripts/ssl1.sh
+         ./.github/scripts/ssl1.sh ${{ secrets.TEST_SECRET }}
