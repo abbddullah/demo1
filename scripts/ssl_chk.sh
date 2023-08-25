@@ -4,7 +4,7 @@
 SLACK_WEBHOOK_URL="$1"
 
 # List of domains to check
-DOMAINS=("example.com" "anotherdomain.com")
+DOMAINS=("www.google.com" "www.twitter.com")
 
 # Loop through domains
 for domain in "${DOMAINS[@]}"; do
